@@ -91,9 +91,20 @@
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nconsole.log('hello, webpack');\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('hello, webpack');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("throw new Error(\"Module parse failed: Unexpected character '@' (1:0)\\nYou may need an appropriate loader to handle this file type.\\n> @import './test.css';\\n| \\n| body {\");\n\n//# sourceURL=webpack:///./src/style.css?");
 
 /***/ })
 

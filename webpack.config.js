@@ -21,11 +21,42 @@ module.exports = {
     new htmlWebpackPlugin({
       template: './src/index.html', // 打包模板
       filename: 'index.html', // 输出的文件
-      minify: {
-        removeAttributeQuotes: true, //删除双引号
-        collapseWhitespace: true // 压缩成一行
-      },
+      // minify: {
+      //   removeAttributeQuotes: true, //删除双引号
+      //   collapseWhitespace: true // 压缩成一行
+      // },
       hash: true
     })
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        // 从下至上的顺序执行loader
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              insertAt: 'top'
+            }
+          },
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.stylus$/,
+        // 从下至上的顺序执行loader
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              insertAt: 'top'
+            }
+          },
+          'css-loader',
+          'stylus-loader'
+        ]
+      }
+    ]
+  }
 };
