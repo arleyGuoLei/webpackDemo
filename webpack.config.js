@@ -48,6 +48,7 @@ module.exports = {
         use: [
           miniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader', // 先postcss, 再css-loader
           'stylus-loader'
         ]
       }

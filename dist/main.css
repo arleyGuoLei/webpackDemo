@@ -6,6 +6,7 @@ body {
 }
 body p {
   font-weight: bold;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
