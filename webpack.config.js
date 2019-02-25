@@ -2,6 +2,7 @@
 
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development', // 模式 production development
@@ -26,6 +27,9 @@ module.exports = {
       //   collapseWhitespace: true // 压缩成一行
       // },
       hash: true
+    }),
+    new miniCssExtractPlugin({
+      filename: 'main.css'
     })
   ],
   module: {
@@ -34,12 +38,7 @@ module.exports = {
         test: /\.css$/,
         // 从下至上的顺序执行loader
         use: [
-          {
-            loader: 'style-loader',
-            options: {
-              insertAt: 'top'
-            }
-          },
+          miniCssExtractPlugin.loader,
           'css-loader'
         ]
       },
@@ -47,12 +46,7 @@ module.exports = {
         test: /\.stylus$/,
         // 从下至上的顺序执行loader
         use: [
-          {
-            loader: 'style-loader',
-            options: {
-              insertAt: 'top'
-            }
-          },
+          miniCssExtractPlugin.loader,
           'css-loader',
           'stylus-loader'
         ]
