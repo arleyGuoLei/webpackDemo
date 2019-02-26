@@ -3,9 +3,10 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development', // 模式 production development
+  mode: 'production', // 模式 production development
   entry: './src/index.js', // 入口
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -30,6 +31,9 @@ module.exports = {
     }),
     new miniCssExtractPlugin({
       filename: 'main.css'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery' // 为每一个模块提供一个$  jquery
     })
   ],
   module: {
