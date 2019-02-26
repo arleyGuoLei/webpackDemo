@@ -30,11 +30,11 @@ module.exports = {
       hash: true
     }),
     new miniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'css/main.css'
     }),
-    new webpack.ProvidePlugin({
-      $: 'jquery' // 为每一个模块提供一个$  jquery
-    })
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery' // 为每一个模块提供一个$  jquery
+    // })
   ],
   module: {
     rules: [
@@ -43,9 +43,10 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 1
+            limit: 1,
+            outputPath: 'img/'
           }
-        }
+        },
       },
       {
         test: /\.js$/,
