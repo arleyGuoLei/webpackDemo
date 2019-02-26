@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nconsole.log('hello, webpack');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n__webpack_require__(/*! ./test.stylus */ \"./src/test.stylus\");\n\nconsole.log('hello, webpack');\n\nvar fn = function fn() {\n  console.log('fn...');\n};\n\nfn();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -102,9 +102,20 @@ eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nconsole.lo
   !*** ./src/style.css ***!
   \***********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module parse failed: Unexpected character '@' (1:0)\\nYou may need an appropriate loader to handle this file type.\\n> @import './test.css';\\n| \\n| body {\");\n\n//# sourceURL=webpack:///./src/style.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.css?");
+
+/***/ }),
+
+/***/ "./src/test.stylus":
+/*!*************************!*\
+  !*** ./src/test.stylus ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/test.stylus?");
 
 /***/ })
 
