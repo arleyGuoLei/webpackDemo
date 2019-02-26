@@ -3,3 +3,9 @@
 body {
   background: blue;
 }
+
+.bg {
+  background: url('./avatar.gif');
+  height: 100px;
+  width: 100px;
+}

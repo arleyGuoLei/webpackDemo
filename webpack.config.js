@@ -39,6 +39,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpg|png|gif)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 1
+          }
+        }
+      },
+      {
         test: /\.js$/,
         use: {
           loader: 'babel-loader',
